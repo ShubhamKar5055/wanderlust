@@ -1,0 +1,141 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Plus Jakarta Sans", serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+
+.navbar {
+    min-height: 5rem;
+}
+
+.fa-compass {
+    font-size: 2rem;
+    color: #fe424d;
+}
+
+.nav-link {
+    color: #222 !important;
+    cursor: pointer;
+}
+
+/* All Listings Page */
+
+.card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    height: 20rem !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0.5rem 0 !important;
+}
+
+.card-text {
+    font-weight: 400  !important;
+}
+
+.listing-link {
+    display: inline-block;
+    max-width: 28rem;
+    min-width: 16rem;
+    text-decoration: none;
+}
+
+/* Card Hover Effect */
+.card-img-overlay {
+    background-color: #fff;
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+}
+
+/* Footer */
+
+.f-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 8rem; 
+    background-color: #ebebeb;
+}
+
+.f-info-socials, .f-info-brand, .f-info-links {
+    width: 100%;
+}
+
+.f-info-socials i, .f-info-links a {
+    margin-right: 0.5rem;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+/* New Listing Page */
+
+.btn-add {
+    width: 5rem;
+    border: none;
+    background-color: #fe424d;
+}
+
+/* Edit Listing Page */
+
+.btn-edit {
+    width: 5rem;
+    border: none;
+    background-color: #fe424d;
+}
+
+/* Show Listing Page */
+
+.card-show-img {
+    height: 35vh !important;
+}
+
+.card-show-text {
+    line-height: 1.8;
+}
+
+.btn-show-edit, .btn-delete {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+}
+
+.btn-delete {
+    background-color: #fe424d
+}
+
+
+

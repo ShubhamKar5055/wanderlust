@@ -1,0 +1,29 @@
+<% layout("layouts/boilerplate.ejs") %>
+<!--    d-flex: Makes the .row a flex container.
+        The justify-content-center and justify-content-sm-start classes, along with the specified max-width of 28rem,
+        align the heading with the card elements, especially on extra small screen sizes.    -->
+<div class="row d-flex justify-content-center justify-content-sm-start">
+    <h3 class="my-4" style="max-width: 28rem;">All Listings</h3>
+</div>
+<!--    row-cols-breakpoint-n specifies the minimum number of columns per row for specific screen size ranges.
+        There would only be a single card element in each row (for extra smaller screen sizes).
+        The justify-content-center will center that one card within the row.   -->
+<div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 d-flex justify-content-center justify-content-sm-start">
+    <% for(listing of allListings) { %>
+        <a href="/listings/<%= listing._id %>" class="listing-link">
+            <div class="card col">
+                <img src="<%=  listing.image %>" class="card-img-top" alt="listing-image">
+                <div class="card-img-overlay"></div>
+                <div class="card-body">
+                  <p class="card-text">
+                        <b><%= listing.title %></b>
+                        <br>
+                        &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+                  </p>
+                </div>
+            </div>
+        </a>
+    <% } %>
+</div>
+
+
