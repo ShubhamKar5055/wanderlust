@@ -9,17 +9,17 @@ async function main() {
 }
 
 main()
-.then(() => {
-    console.log("Database connection successful");
-})
-.catch((error) => {
-    console.log(error);
-});
+    .then(() => {
+        console.log("Database connection successful");
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 Listing.insertMany(sampleListings.data)
-.then(() => {
-    console.log("Data was initialized");
-})
-.catch((error) => {
-    console.log(error);
-});
+    .then(() => {
+        console.log("Data was initialized");
+    })
+    .catch((error) => {
+        console.log(error);
+    });

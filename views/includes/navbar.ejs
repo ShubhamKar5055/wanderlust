@@ -3,27 +3,34 @@
       It's background color is set with bg-white with a border added at the bottom.
       With sticky-top, the navbar will remain fixed at the top of the viewport as we scroll down.  -->
 <nav class="navbar navbar-expand-md bg-white border-bottom sticky-top">
-  <!--  A container-fluid will take up the entire available width of the screen, 100% of the viewport width.  -->
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
-    <!--  This creates a button (the hamburger menu) that will appear when the screen size is small (on mobile or narrow screens).
+    <!--  A container-fluid will take up the entire available width of the screen, 100% of the viewport width.  -->
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"
+            ><i class="fa-regular fa-compass"></i
+        ></a>
+        <!--  This creates a button (the hamburger menu) that will appear when the screen size is small (on mobile or narrow screens).
           The "navbar-toggler" and "navbar-toggler-icon" classes styles the button to look like a hamburger menu.
           data-bs-toggle="collapse" tells Bootstrap that the button will toggle (open or close) an element when clicked.
           "#navbarNavAltMarkup" is the ID of the element to be shown or hidden.  -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!--  The collapse class makes the navbar hidden (collapsed) by default, especially on smaller screens (mobile).
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--  The collapse class makes the navbar hidden (collapsed) by default, especially on smaller screens (mobile).
           navbar-collapse: This is a Bootstrap class that ensures the content behaves as a collapsible element when needed (on smaller screens).
           id="navbarNavAltMarkup": This unique ID links the button to this collapsible content.  -->
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <!--  navbar-nav and nav-link classes are used to style the links inside the navbar. 
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <!--  navbar-nav and nav-link classes are used to style the links inside the navbar. 
             The navbar-nav <div> also acts as a container for the different links.  -->
-      <div class="navbar-nav">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link" href="/listings">All Listings</a>
-        <a class="nav-link" href="/listings/new">New Listing</a>
-      </div>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/listings">All Listings</a>
+                <a class="nav-link" href="/listings/new">New Listing</a>
+            </div>
+        </div>
     </div>
-  </div>
 </nav>

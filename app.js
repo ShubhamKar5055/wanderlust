@@ -23,12 +23,12 @@ async function main() {
 }
 
 main()
-.then(() => {
-    console.log("Database connection successful");
-})
-.catch((error) => {
-    console.log(error);
-});
+    .then(() => {
+        console.log("Database connection successful");
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 const port = 8080;
 
@@ -44,7 +44,7 @@ app.get("/listings", async (req, res) => {
 
 // New Route
 app.get("/listings/new", (req, res) => {
-    res.render("listings/new.ejs")
+    res.render("listings/new.ejs");
 });
 
 // Create Route
@@ -56,14 +56,14 @@ app.post("/listings", async (req, res) => {
 
 // Show Route
 app.get("/listings/:id", async (req, res) => {
-    const { id } = req.params; 
+    const { id } = req.params;
     const listing = await Listing.findById(id);
     res.render("listings/show.ejs", { listing });
 });
 
 // Edit Route
 app.get("/listings/:id/edit", async (req, res) => {
-    const { id } = req.params; 
+    const { id } = req.params;
     const listing = await Listing.findById(id);
     res.render("listings/edit.ejs", { listing });
 });

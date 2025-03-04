@@ -9,33 +9,67 @@
                     The form-control class is applied to input elements to style them with Bootstrap’s default design.     -->
             <div class="form-group mb-3">
                 <label for="title">Title</label>
-                <input type="text" value="<%= listing.title %>" id="title" class="form-control" name="listing[title]">
+                <input
+                    type="text"
+                    value="<%= listing.title %>"
+                    id="title"
+                    class="form-control"
+                    name="listing[title]"
+                />
             </div>
             <div class="form-group mb-3">
                 <label for="description">Description</label>
-                <textarea id="description" class="form-control" name="listing[description]"><%= listing.description %></textarea>
+                <textarea
+                    id="description"
+                    class="form-control"
+                    name="listing[description]"
+                >
+<%= listing.description %></textarea
+                >
             </div>
             <div class="form-group mb-3">
                 <label for="image">Image Link</label>
-                <input type="text" value="<%= listing.image %>" id="image" class="form-control" name="listing[image]">
+                <input
+                    type="text"
+                    value="<%= listing.image %>"
+                    id="image"
+                    class="form-control"
+                    name="listing[image]"
+                />
             </div>
             <div class="form-group mb-3">
                 <label for="price">Price</label>
-                <input type="number" value="<%= listing.price %>" id="price" class="form-control" name="listing[price]">
+                <input
+                    type="number"
+                    value="<%= listing.price %>"
+                    id="price"
+                    class="form-control"
+                    name="listing[price]"
+                />
             </div>
             <div class="row">
                 <div class="form-group col-md-8 mb-3">
                     <label for="location">Location</label>
-                    <input type="text" value="<%= listing.location %>" id="location" class="form-control" name="listing[location]">
+                    <input
+                        type="text"
+                        value="<%= listing.location %>"
+                        id="location"
+                        class="form-control"
+                        name="listing[location]"
+                    />
                 </div>
                 <div class="form-group col-md-4 mb-3">
                     <label for="country">Country</label>
-                    <input type="text" value="<%= listing.country %>" id="country" class="form-control" name="listing[country]">
+                    <input
+                        type="text"
+                        value="<%= listing.country %>"
+                        id="country"
+                        class="form-control"
+                        name="listing[country]"
+                    />
                 </div>
             </div>
             <button class="btn btn-dark mt-4 mb-5 btn-edit">Edit</button>
         </form>
     </div>
 </div>
-
-
