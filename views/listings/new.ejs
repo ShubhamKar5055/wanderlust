@@ -1,10 +1,16 @@
 <% layout("layouts/boilerplate.ejs") %>
+
 <div class="row">
     <!--    "offset-* moves columns to the right by a certain number of columns.
             Here, it has been used for centering column elements, primarily the form groups.      -->
     <div class="col-8 offset-2">
         <h3 class="my-4">Create a New Listing</h3>
-        <form action="/listings" method="post">
+        <form
+            action="/listings"
+            method="post"
+            novalidate
+            class="needs-validation"
+        >
             <!--    The form-group class groups form elements together with proper spacing.
                     The form-control class is applied to input elements to style them with Bootstrap’s default design.     -->
             <div class="form-group mb-3">
@@ -15,7 +21,10 @@
                     id="title"
                     class="form-control"
                     name="listing[title]"
+                    required
                 />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Title is required.</div>
             </div>
             <div class="form-group mb-3">
                 <label for="description">Description</label>
@@ -23,7 +32,12 @@
                     id="description"
                     class="form-control"
                     name="listing[description]"
+                    required
                 ></textarea>
+                <div class="valid-feedback">Description seems valid.</div>
+                <div class="invalid-feedback">
+                    Please enter a short description.
+                </div>
             </div>
             <div class="form-group mb-3">
                 <label for="img-link">Image Link</label>
@@ -43,7 +57,12 @@
                     id="price"
                     class="form-control"
                     name="listing[price]"
+                    required
                 />
+                <div class="valid-feedback">Great pricing!</div>
+                <div class="invalid-feedback">
+                    Price must be a positive number.
+                </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-8 mb-3">
@@ -54,7 +73,12 @@
                         id="location"
                         class="form-control"
                         name="listing[location]"
+                        required
                     />
+                    <div class="valid-feedback">Location has been set.</div>
+                    <div class="invalid-feedback">
+                        Please provide a location.
+                    </div>
                 </div>
                 <div class="form-group col-md-4 mb-3">
                     <label for="country">Country</label>
@@ -64,7 +88,14 @@
                         id="country"
                         class="form-control"
                         name="listing[country]"
+                        required
                     />
+                    <div class="valid-feedback">
+                        Country selection confirmed.
+                    </div>
+                    <div class="invalid-feedback">
+                        Please specify the country.
+                    </div>
                 </div>
             </div>
             <button class="btn btn-dark mt-4 mb-5 btn-add">Add</button>
