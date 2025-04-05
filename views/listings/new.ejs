@@ -5,6 +5,9 @@
             Here, it has been used for centering column elements, primarily the form groups.      -->
     <div class="col-8 offset-2">
         <h3 class="my-4">Create a New Listing</h3>
+        <!--    novalidate attribute on a <form> disables the default HTML5 validation.
+                The needs-validation class in bootstrap applies custom client-side validation styles using JavaScript to
+                trigger and display feedback  -->
         <form
             action="/listings"
             method="post"
@@ -12,9 +15,10 @@
             class="needs-validation"
         >
             <!--    The form-group class groups form elements together with proper spacing.
+                    The form-label class ensures proper spacing and alignment of labels.
                     The form-control class is applied to input elements to style them with Bootstrap’s default design.     -->
             <div class="form-group mb-3">
-                <label for="title">Title</label>
+                <label for="title" class="form-label">Title</label>
                 <input
                     type="text"
                     placeholder="Add a catchy title"
@@ -27,7 +31,7 @@
                 <div class="invalid-feedback">Title is required.</div>
             </div>
             <div class="form-group mb-3">
-                <label for="description">Description</label>
+                <label for="description" class="form-label">Description</label>
                 <textarea
                     id="description"
                     class="form-control"
@@ -40,7 +44,7 @@
                 </div>
             </div>
             <div class="form-group mb-3">
-                <label for="img-link">Image Link</label>
+                <label for="img-link" class="form-label">Image Link</label>
                 <input
                     type="text"
                     placeholder="Enter image URL/Link"
@@ -50,7 +54,7 @@
                 />
             </div>
             <div class="form-group mb-3">
-                <label for="price">Price</label>
+                <label for="price" class="form-label">Price</label>
                 <input
                     type="number"
                     placeholder="1200"
@@ -66,7 +70,7 @@
             </div>
             <div class="row">
                 <div class="form-group col-md-8 mb-3">
-                    <label for="location">Location</label>
+                    <label for="location" class="form-label">Location</label>
                     <input
                         type="text"
                         placeholder="Jaipur, Rajasthan"
@@ -81,7 +85,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-4 mb-3">
-                    <label for="country">Country</label>
+                    <label for="country" class="form-label">Country</label>
                     <input
                         type="text"
                         placeholder="India"

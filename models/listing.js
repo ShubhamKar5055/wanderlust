@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Review = require("./review.js");
 
 const Schema = mongoose.Schema;
 
@@ -29,8 +30,23 @@ const listingSchema = new Schema({
     country: {
         type: String,
     },
+    reviews: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Review",
+        },
+    ],
 });
 
-const Listing = mongoose.model("Listing", listingSchema);
+// The middleware would run just after a listing document is deleted from the database (Database operation is completed)
+// It handles the deletion of reviews associated with the listing
+listingSchema.post("findOneAndDelete", async (listing) => {
+    if (listing.reviews.length) {
+        const result = await Review.deleteMany({
+            _id: { $in: listing.reviews },
+        });
+        console.log(result);
+    }
+});
 
-module.exports = Listing;
+module.exports = mongoose.model("Listing", listingSchema);
